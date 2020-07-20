@@ -29,7 +29,7 @@ node {
                 rc = sh returnStatus: true, script: "${toolbelt} force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile ${jwt_key_file} --setdefaultdevhubusername --instanceurl ${SFDC_HOST}"
             }else{
                  rc = bat returnStatus: true, script: "\"${toolbelt}\" force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile \"${jwt_key_file}\" --setdefaultdevhubusername --instanceurl ${SFDC_HOST}"		    
-                 rc2 = bat (returnStdout: true, script: "git diff --name-only HEAD HEAD~1").trim()
+                 def rc2 = bat (returnStdout: true, script: "git diff --name-only HEAD HEAD~1").trim()
 		    
 //		    println '***'
 		    echo rc2

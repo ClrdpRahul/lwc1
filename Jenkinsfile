@@ -29,11 +29,11 @@ node {
                 rc = sh returnStatus: true, script: "${toolbelt} force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile ${jwt_key_file} --setdefaultdevhubusername --instanceurl ${SFDC_HOST}"
             }else{
                  rc = bat returnStatus: true, script: "\"${toolbelt}\" force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile \"${jwt_key_file}\" --setdefaultdevhubusername --instanceurl ${SFDC_HOST}"		    
-                 rc2 = bat returnStdout: true, script: "git diff --name-only HEAD HEAD~1 "
+                 rc2 = bat returnStdout: true, script: "git diff --name-only HEAD HEAD~1"
 		    println '***'
-		    println rc2
+		    echo rc2
 		    println '***'
-		    rc3 = bat returnStatus: true, script: "mkdir C:/deploy-cmp/${rc2}"
+//		    rc3 = bat returnStatus: true, script: "mkdir C:/deploy-cmp/${rc2}"
             }
             if (rc != 0) { error 'hub org authorization failed' }
 

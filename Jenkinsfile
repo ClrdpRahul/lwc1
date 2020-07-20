@@ -33,11 +33,12 @@ node {
 		    
 //		    println '***'
 //		    println("################ " + rc2 + " ####################")
-		    result = rc2.readLines().drop(1).join(" ")      
-		    println("result-" + result)
+		    result = rc2.readLines()
+		    println("-->>")
+		    println( result)
 		    
 //		    println '***'
-		    rc3 = bat returnStatus: true, script: "mkdir C:/deploy-cmp/${result}"
+//		    rc3 = bat returnStatus: true, script: "mkdir C:/deploy-cmp/${result}"
             }
             if (rc != 0) { error 'hub org authorization failed' }
 

@@ -46,6 +46,8 @@ node {
 		    	}			    
 				echo folderString
 			    rc3 = bat returnStatus: true, script: "mkdir C:\\deploy-cmp\\${folderString}"
+			    rc4 = bat returnStatus: true, script: "copy ${result[i]} C:\\deploy-cmp\\${folderString}"
+			    
 		    }
 		    
 //		    println '***'

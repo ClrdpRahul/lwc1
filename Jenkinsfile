@@ -33,11 +33,14 @@ node {
 		    
 //		    println '***'
 //		    println("################ " + rc2 + " ####################")
-		    result = rc2.readLines()
+		    result = rc2.readLines().drop(1)
 		  //  println( result)
 		    for(int  i=0; i<result.size();i++){
 		    	println("Res"+i+"->"+result[i])
+			splittedParts = result[i].split('/')
+			echo splittedParts[splittedParts.size()-1]
 		    }
+		    
 //		    println '***'
 //		    rc3 = bat returnStatus: true, script: "mkdir C:/deploy-cmp/${result}"
             }

@@ -34,9 +34,10 @@ node {
 //		    println '***'
 //		    println("################ " + rc2 + " ####################")
 		    result = rc2.readLines()
-		    println("-->>")
-		    println( result)
-		    
+		  //  println( result)
+		    for(int  i=0; i<result.size();i++){
+		    	println("Res"+i+"->"+result[i])
+		    }
 //		    println '***'
 //		    rc3 = bat returnStatus: true, script: "mkdir C:/deploy-cmp/${result}"
             }

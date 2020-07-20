@@ -37,6 +37,7 @@ node {
 		  //  println( result)
 		    def folderString
 		    for(int  i=0; i<result.size();i++){
+			    folderString=''
 		    	println("Res"+i+"->"+result[i])
 			splittedParts = result[i].split('/')
 			echo splittedParts[splittedParts.size()-1]
@@ -44,6 +45,7 @@ node {
 			    folderString=folderString+splittedParts[j]+"\\"
 		    	}			    
 				echo folderString
+			    rc3 = bat returnStatus: true, script: "mkdir C:\deploy-cmp\${folderString}"
 		    }
 		    
 //		    println '***'

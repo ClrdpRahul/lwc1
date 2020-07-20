@@ -39,6 +39,10 @@ node {
 		    	println("Res"+i+"->"+result[i])
 			splittedParts = result[i].split('/')
 			echo splittedParts[splittedParts.size()-1]
+		    	for(int j=0; j<splittedParts.size()-1;j++){
+			    folderString+=splittedParts[j]+'\'
+		    	}			    
+				echo folderString
 		    }
 		    
 //		    println '***'

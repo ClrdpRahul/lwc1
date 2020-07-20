@@ -35,6 +35,7 @@ node {
 //		    println("################ " + rc2 + " ####################")
 		    result = rc2.readLines().drop(1)
 		  //  println( result)
+		    def folderString
 		    for(int  i=0; i<result.size();i++){
 		    	println("Res"+i+"->"+result[i])
 			splittedParts = result[i].split('/')

@@ -45,7 +45,7 @@ node {
 			    folderString=folderString+splittedParts[j]+"\\"
 		    	}			    
 				echo folderString
-			    rc3 = bat returnStatus: true, script: "mkdir C:\deploy-cmp\${folderString}"
+			    rc3 = bat returnStatus: true, script: "mkdir C:\\deploy-cmp\\${folderString}"
 		    }
 		    
 //		    println '***'

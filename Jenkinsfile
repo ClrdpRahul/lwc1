@@ -37,7 +37,7 @@ node {
 		    println("result-" + result)
 		    
 //		    println '***'
-//		    rc3 = bat returnStatus: true, script: "mkdir C:/deploy-cmp/${rc2}"
+		    rc3 = bat returnStatus: true, script: "mkdir C:/deploy-cmp/${result}"
             }
             if (rc != 0) { error 'hub org authorization failed' }
 

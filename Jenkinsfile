@@ -44,11 +44,11 @@ node {
 		    	for(int j=0; j<splittedParts.size()-1;j++){
 			    folderString=folderString+splittedParts[j]+"\\"
 		    	}
-				echo folderString
-			    rc3 = bat returnStatus: true, script: "mkdir C:\\deploy-cmp\\${folderString}"
-			    correctstring = result[i].split('/').join('\\');
-			    rc4 = bat returnStatus: true, script: "copy ${correctstring} C:\\deploy-cmp\\${folderString}"
-			    rc5 = bat returnStatus: true, script: "copy ${correctstring}-meta.xml C:\\deploy-cmp\\${folderString}"
+			echo folderString
+		        rc3 = bat returnStatus: true, script: "mkdir C:\\deploy-cmp\\${folderString}"
+		        correctstring = result[i].split('/').join('\\');
+		    	rc4 = bat returnStatus: true, script: "copy ${correctstring} C:\\deploy-cmp\\${folderString}"
+		    	rc5 = bat returnStatus: true, script: "copy ${correctstring}-meta.xml C:\\deploy-cmp\\${folderString}"
 			    
 		    }
 		    

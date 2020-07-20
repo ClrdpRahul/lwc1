@@ -32,7 +32,7 @@ node {
                  def rc2 = bat (returnStdout: true, script: "git diff --name-only HEAD HEAD~1").trim()
 		    
 //		    println '***'
-		    echo rc2
+		    println("################ " + rc2 + " ####################")
 //		    println '***'
 //		    rc3 = bat returnStatus: true, script: "mkdir C:/deploy-cmp/${rc2}"
             }

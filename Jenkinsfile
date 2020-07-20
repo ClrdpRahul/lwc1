@@ -63,7 +63,8 @@ node {
 			if (isUnix()) {
 				rmsg = sh returnStdout: true, script: "${toolbelt} force:mdapi:deploy -d manifest/. -u ${HUB_ORG}"
 			}else{
-			   rmsg = bat returnStdout: true, script: "\"${toolbelt}\" force:source:deploy --sourcepath ./force-app/main/default/"
+//			   rmsg = bat returnStdout: true, script: "\"${toolbelt}\" force:source:deploy --sourcepath ./force-app/main/default/"
+			   rmsg = bat returnStdout: true, script: "\"C:\\deploy-cmp\\\" force:source:deploy --sourcepath ./force-app/main/default/"
 			}
 			  
             printf rmsg
